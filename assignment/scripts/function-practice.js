@@ -12,35 +12,44 @@ function hello() {
 console.log('Test - should say "Hello World!"', hello());
 
 
-// 2. Function to return an personalized hello, using the `name` argument.
+// 2. Function to return a personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
 function helloName(name) {
-  return;
+  name = 'AJ'
+  return name;
 }
 // Remember to call the function to test
-
+console.log('Hello,', helloName());
 
 // 3. Function to add two numbers together & return the result
-function addNumbers(firstNumber) {
+function addNumbers(firstNumber, secondNumber) {
+  let answer = firstNumber + secondNumber;
+  return answer;
   // return firstNumber + secondNumber;
 }
-
+console.log(addNumbers(2,2));
 
 // 4. Function to multiply three numbers & return the result
-function multiplyThree() {
-
+function multiplyThree(num1, num2, num3) {
+let answer = num1*num2*num3;
+return answer;
 }
-
+console.log(multiplyThree(3,3,3));
 
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
 function isPositive(number) {
   if (number > 0) {
-    return;
+    number = -3;
+    return true;
   }
-  return;
+  else{
+    return false;
+  }
 }
 // Call the function to test each outcome (true & false) 
+console.log('isPositive resul:', isPositive(10));
+console.log('isPositive result:', isPositive(-10));
 // Write a separate console.log statement for each outcome
 console.log('isPositive - should say true', isPositive(3));
 console.log('isPositive - should say false', isPositive(0));
@@ -49,10 +58,15 @@ console.log('isPositive - should say false', isPositive(-3));
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
+let array = [];
 function getLast(array) {
-
+if (array.length >0) {
+  return array[array.length-1];
+} else {
+  return undefined;
 }
-
+}
+console.log(getLast(array) );
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
